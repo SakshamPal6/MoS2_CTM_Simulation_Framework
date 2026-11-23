@@ -56,7 +56,31 @@ def bold_legends(fig):
         print("  legend %.1f pt%s" % (lg.get_texts()[0].get_fontsize(), "  STILL WIDER THAN THE PANEL" if box.x0 < 0 or box.x1 > fig.bbox.width else ""))
 
 
+TEXT_SIZE, TICK_MIN = 9.0, 7.5
+
+
+def larger_texts(fig):
+    from matplotlib.text import Text
+    ticks, skip = set(), set()
+    for ax in fig.axes:
+        ticks.update(ax.get_xticklabels() + ax.get_yticklabels())
+    for lg in list(fig.legends) + [a.get_legend() for a in fig.axes if a.get_legend() is not None]:
+        skip.update(lg.get_texts() + [lg.get_title()])
+    for t in fig.findobj(Text):
+        if t in skip or t.get_gid() == "keep" or not t.get_text().strip():
+            continue
+        size = t.get_fontsize()
+        if t in ticks:
+            if size < TICK_MIN:
+                t.set_fontsize(TICK_MIN)
+        elif size < TEXT_SIZE:
+            t.set_fontsize(min(TEXT_SIZE, size + 2.0))
+            t.set_fontweight("bold")
+
+
 def save(fig, name, tight=True):
+    fig.canvas.draw()
+    larger_texts(fig)
     bold_legends(fig)
     fig.canvas.draw()
     for ax_ in fig.axes:

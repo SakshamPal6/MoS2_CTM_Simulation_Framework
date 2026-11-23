@@ -125,13 +125,13 @@ def figure1():
     ax.add_patch(Rectangle((2.0, ych), 6.0, 0.9, fc=C_MOS, ec="k", lw=0.5))
     for xa_, lab in ((0.0, "S"), (8.0, "D")):
         ax.add_patch(Rectangle((xa_, ych), 2.0, 3.0, fc=C_NI, ec="k", lw=0.5))
-        ax.text(xa_ + 1.0, ych + 1.9, lab, ha="center", va="center", fontsize=8, fontweight="bold")
-        ax.text(xa_ + 1.0, ych + 0.8, "Ni/Au", ha="center", va="center", fontsize=6)
-    ax.text(5.0, ych + 2.2, "monolayer MoS$_2$", ha="center", fontsize=7.5)
-    ax.text(5.0, ych + 1.35, "L = W = 1 µm", ha="center", fontsize=6.5)
+        ax.text(xa_ + 1.0, ych + 1.9, lab, ha="center", va="center", fontsize=9, fontweight="bold", gid="keep")
+        ax.text(xa_ + 1.0, ych + 0.8, "Ni/Au", ha="center", va="center", fontsize=7, fontweight="bold", gid="keep")
+    ax.text(5.0, ych + 3.7, "monolayer MoS$_2$", ha="center", fontsize=7.5, fontweight="bold", gid="keep")
+    ax.text(5.0, ych + 1.65, "L = W = 1 µm", ha="center", fontsize=7.5, fontweight="bold", gid="keep")
     ax.text(5.0, -1.4, "$V_G$", ha="center", fontsize=8)
-    ax.text(9.0, ych + 3.7, "$V_D$", ha="center", fontsize=8)
-    ax.text(1.0, ych + 3.7, "0 V", ha="center", fontsize=7)
+    ax.text(10.0, ych + 3.7, "$V_D$", ha="right", fontsize=8, fontweight="bold", gid="keep")
+    ax.text(0.0, ych + 3.7, "0 V", ha="left", fontsize=8, fontweight="bold", gid="keep")
     rng = np.random.default_rng(1)
     for key, n in (("blk", 26), ("tun", 16)):
         y0, y1 = tops[key]
@@ -231,7 +231,8 @@ def figure3():
     ax.plot(E, Wd, "o-", color=BLUE, ms=4)
     for v, e, y in zip(vv, E, Wd):
         if v in (-7.0, -8.0, -9.0, -10.0):
-            ax.annotate("%.0f V" % v, (e, y), xytext=(4, -9), textcoords="offset points", fontsize=7, color="0.3")
+            ax.annotate("%.0f V" % v, (e, y), xytext=(-7, 1) if v == -10.0 else (4, -9), textcoords="offset points",
+                        fontsize=7, color="0.3", ha="right" if v == -10.0 else "left")
     ax.set_xlabel("energy per write (fJ)"); ax.set_ylabel("window of a 1 µs write (V)")
     legend_below(fa, [Line2D([], [], color=BLUE, marker="o", ms=4, label="program voltage from -6 to -10 V")])
     fb, ax = panel()
@@ -380,7 +381,7 @@ def figure5():
     ax.set_xlabel("digit read by the crossbar"); ax.set_ylabel("true digit")
     cbar = fd.colorbar(im, ax=ax, pad=0.02); cbar.set_label("share of test digits (%)", fontsize=8)
     fe = plt.figure(figsize=(mf.PW, mf.PH))
-    gs = fe.add_gridspec(4, 8, wspace=0.08, hspace=0.5, left=0.02, right=0.98, top=0.9, bottom=0.03)
+    gs = fe.add_gridspec(4, 8, wspace=0.08, hspace=0.55, left=0.02, right=0.98, top=0.86, bottom=0.03)
     for k in range(32):
         a = fe.add_subplot(gs[k // 8, k % 8])
         a.imshow(X[k].reshape(28, 28), cmap="gray_r"); a.set_xticks([]); a.set_yticks([])
@@ -698,8 +699,8 @@ def figureS8():
     ax.text(0.5 * (bx0 + bx1), 2.5, "crossbar 2:\n128 rows × 10 pairs", ha="center", va="top", fontsize=6.5)
     ax.annotate("", xy=(12.4, 4.6), xytext=(11.55, 4.6), arrowprops=arr)
     ax.text(13.2, 4.6, "largest\noutput\n= digit", ha="center", va="center", fontsize=6.5)
-    ax.text(13.6, 7.6, "inputs as 1 V read pulses of\n0-1 µs on the drain lines\ngates at V$_G$ = 0 V\nweight = G$^+$ - G$^-$, written by\n1 µs gate pulses",
-            ha="center", va="top", fontsize=6.0, color="0.25")
+    ax.text(13.7, 7.75, "inputs as 1 V read pulses of\n0-1 µs on the drain lines\ngates at V$_G$ = 0 V\nweight = G$^+$ - G$^-$, written by\n1 µs gate pulses",
+            ha="center", va="top", fontsize=8, fontweight="bold", color="0.25", gid="keep")
     return [g]
 
 
