@@ -46,19 +46,20 @@ def _legend_below(fig, handles, ncol=2):
                handlelength=1.8, columnspacing=1.2, labelspacing=0.45)
 
 
-def _legend_outside_below(fig, ax, ncol=2, fontsize=7.5):
+def _legend_outside_below(fig, ax, ncol=2, fontsize=7.5, handlelength=1.8):
     h, lb = ax.get_legend_handles_labels()
-    fig.legend(h, lb, loc="outside lower center", ncol=ncol, fontsize=fontsize, frameon=False, handlelength=1.8, columnspacing=1.2)
+    fig.legend(h, lb, loc="outside lower center", ncol=ncol, fontsize=fontsize, frameon=False, handlelength=handlelength,
+               columnspacing=1.2)
 
 
 def leg_h(rows):
     return 0.10 + LEG_ROW * rows
 
 
-def _band_axes(legend_h=LEG_H):
+def _band_axes(legend_h=LEG_H, lift=0.0):
     fig = plt.figure(figsize=(BAND_W, BAND_H + legend_h))
     hh = BAND_H + legend_h
-    return fig, fig.add_axes([0.75 / BAND_W, (legend_h + 0.5) / hh, (BAND_W - 0.85) / BAND_W, (BAND_H - 0.75) / hh])
+    return fig, fig.add_axes([0.75 / BAND_W, (legend_h + 0.5 + lift) / hh, (BAND_W - 0.85) / BAND_W, (BAND_H - 0.75 - lift) / hh])
 
 
 def _fitted_traps():
@@ -91,7 +92,7 @@ def _band_legend(fig, extra, base=True):
           Line2D([], [], color=RED, lw=0, marker="|", ms=7, mew=1.4, label="HfO$_2$ traps"),
           Line2D([], [], color=BLUE, lw=0, marker="s", ms=2.5, label="shallow Al$_2$O$_3$ defects"),
           Line2D([], [], color=MAGENTA, lw=0, marker="s", ms=5, label="fitted border traps")] + list(extra)
-    fig.legend(handles=hd if base else list(extra), loc="lower center", bbox_to_anchor=(0.5, 0.01), ncol=2, fontsize=7,
+    fig.legend(handles=hd if base else list(extra), loc="lower center", bbox_to_anchor=(0.5, 0.01), ncol=2 if base else 1, fontsize=7,
                frameon=False, handlelength=1.6, columnspacing=1.0, labelspacing=0.4)
 
 
@@ -153,7 +154,7 @@ def figure1():
                     arrowprops=dict(arrowstyle="-", lw=0.6, color=col))
     ax.set_xlim(-0.3, 17.2); ax.set_ylim(-2.4, ych + 4.4); ax.axis("off")
 
-    fb, ax = _band_axes()
+    fb, ax = _band_axes(lift=0.15)
     segs, xend, tun, ft = _band_panel(-10.0, ax)
     _band_steps(ax, segs, xend)
     cb_at = lambda xx: tun["cb"][0] + (xx - tun["xa"]) / (tun["xb"] - tun["xa"]) * (tun["cb"][1] - tun["cb"][0])
@@ -176,7 +177,7 @@ def figure1():
     axi.set_xlim(x0, x1); axi.set_ylim(y0, y1); axi.set_xticks([]); axi.set_yticks([])
     ax.indicate_inset_zoom(axi, edgecolor="0.35")
     _band_legend(fb, [Line2D([], [], color=BLUE, lw=0, marker="o", ms=4.5, mfc="white", mew=1.3,
-                             label="hop sites of the released electron"),
+                             label="hop sites of the\nreleased electron"),
                       Line2D([], [], color=BLUE, lw=1.1, marker=">", ms=4, label="hops during the write")])
     return [fa, fb]
 
@@ -193,7 +194,7 @@ def figure2():
     ax.set_xlabel("gate voltage (V)"); ax.set_ylabel("drain current (A)")
     ax.set_ylim(5e-13, 2e-6)
     legend_below(fa, [Line2D([], [], color=c, lw=1.3, label="erased" if v is None else "%.1f V, 1 µs" % v)
-                      for v, c in cols.items()], ncol=3, fontsize=7)
+                      for v, c in cols.items()], ncol=2, fontsize=7)
     A = J("design_maps.json")["a"]
     fb, ax = panel()
     W = np.array(A["window_V"])
@@ -253,7 +254,7 @@ def figure3():
     ax.set_xticks(range(len(budget))); ax.set_xticklabels([b[0] for b in budget], fontsize=6.8)
     ax.set_ylabel("energy (fJ)")
     legend_below(fc, [Patch(fc=GREEN, label="reading in place (V$_D$ = 1 V, 1 µs)"), Patch(fc=BLUE, label="writing (-10 V, 1 µs)"),
-                      Patch(fc=ORANGE, label="learning on the chip")], ncol=2, fontsize=7)
+                      Patch(fc=ORANGE, label="learning on the chip")], ncol=1, fontsize=7)
     return [fa, fb, fc]
 
 
@@ -439,12 +440,12 @@ def figure6():
         row = lambda f: [f(E["n%d_b%d" % (n, bv)]) for n in ns]
         for f, col, mk in ((lambda c: c["digital"]["energy_J"], "0.3", "o"), (lambda c: c["rewrite_J"]["total_J"], BLUE, "s")):
             ax.loglog(ns, row(f), ls, marker=mk, color=col, ms=4.5, mfc=mfc or col, lw=1.3)
-    ax.set_xlabel("number of unknowns"); ax.set_ylabel("energy per solution (J)")
+    ax.set_xlabel("number of unknowns"); ax.set_ylabel("energy per"+"\n"+"solution (J)")
     ax.set_xticks(ns); ax.set_xticklabels([str(n) for n in ns]); ax.minorticks_off()
     legend_below(fc, [Line2D([], [], color="0.3", marker="o", lw=1.3, label="Tesla V100 graphics processor"),
                       Line2D([], [], color=BLUE, marker="s", lw=1.3, label="crossbar of model cells"),
                       Line2D([], [], color="0.5", ls="-", lw=1.3, label="source strength 2"),
-                      Line2D([], [], color="0.5", ls="--", lw=1.3, label="source strength 5")], ncol=2, fontsize=7)
+                      Line2D([], [], color="0.5", ls="--", lw=1.3, label="source strength 5")], ncol=1, fontsize=7)
     return [fa, fb, fc]
 
 
@@ -461,14 +462,14 @@ def figure7():
     legend_below(fa, [Line2D([], [], color=BLUE, lw=1.8, label="all digits, on chip"),
                       Line2D([], [], color=BLUE, ls="--", lw=1.2, label="all digits, software"),
                       Line2D([], [], color=ORANGE, lw=1.8, label="new digits 5-9, on chip"),
-                      Line2D([], [], color=ORANGE, ls="--", lw=1.2, label="new digits 5-9, software")], ncol=2, fontsize=7.5)
+                      Line2D([], [], color=ORANGE, ls="--", lw=1.2, label="new digits 5-9, software")], ncol=1, fontsize=7.5)
     t = J("network_temperature.json")
     fb, ax = panel()
     T = [25, 50, 85, 125]
     ax.plot(T, [100 * t["T_%dC" % c]["B_programmed_and_read_hot"] for c in T], "o-", color=GREEN, ms=4,
             label="written and read at the temperature")
     ax.plot(T, [100 * t["T_%dC" % c]["A_programmed_25C_held_10min_read_hot"] for c in T], "s--", color=RED, ms=4,
-            label="written at 25 °C, held 10 min at the temperature")
+            label="written at 25 °C, held 10 min\nat the temperature")
     ax.set_xlabel("temperature (°C)"); ax.set_ylabel("MNIST accuracy (%)"); ax.set_ylim(40, 100)
     _legend_outside_below(fb, ax, ncol=1, fontsize=7)
     return [fa, fb]
@@ -604,7 +605,7 @@ def figureS4():
                     label="%s pulse%s" % (wl, el))
     ax.set_xlabel("temperature (°C)"); ax.set_ylabel("window (V)")
     ax.set_xlim(15, 135); ax.set_ylim(0, 6)
-    _legend_outside_below(f, ax, ncol=1, fontsize=7)
+    _legend_outside_below(f, ax, ncol=1, fontsize=7, handlelength=3.6)
     return [f]
 
 

@@ -24,7 +24,40 @@ def J(name):
     return json.loads((RES / name).read_text())
 
 
+LEGEND_SIZE = 9.0
+
+
+LEGEND_MIN = 8.0
+
+
+def _legend_size(lg, size):
+    for t in lg.get_texts() + [lg.get_title()]:
+        t.set_fontweight("bold")
+        t.set_fontsize(size)
+    lg.prop.set_size(size)
+
+
+def bold_legends(fig):
+    legends = list(fig.legends) + [a.get_legend() for a in fig.axes if a.get_legend() is not None]
+    for lg in legends:
+        _legend_size(lg, LEGEND_SIZE)
+    for _ in range(4):
+        fig.canvas.draw()
+        width, done = fig.bbox.width, True
+        for lg in legends:
+            box, size = lg.get_window_extent(), lg.get_texts()[0].get_fontsize()
+            if (box.x0 < 2 or box.x1 > width - 2) and size > LEGEND_MIN:
+                _legend_size(lg, max(LEGEND_MIN, size * (width - 10) / box.width))
+                done = False
+        if done:
+            break
+    for lg in legends:
+        box = lg.get_window_extent()
+        print("  legend %.1f pt%s" % (lg.get_texts()[0].get_fontsize(), "  STILL WIDER THAN THE PANEL" if box.x0 < 0 or box.x1 > fig.bbox.width else ""))
+
+
 def save(fig, name, tight=True):
+    bold_legends(fig)
     fig.canvas.draw()
     for ax_ in fig.axes:
         for lab in ax_.get_xticklabels() + ax_.get_yticklabels():
