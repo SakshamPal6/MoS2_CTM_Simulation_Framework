@@ -1,0 +1,66 @@
+{
+ "label": "MODEL PREDICTION: Newton-Raphson, Jacobian in model cells with write-and-verify",
+ "slices": 3,
+ "verify_pulses_per_cell": 3,
+ "lambda_1": {
+  "digital_newton": 3,
+  "tol_0.01": {
+   "converged_fraction": 1.0,
+   "newton_mean": 4.0,
+   "refinements_mean": 38.7,
+   "matvec_mean": 967.5,
+   "final_residual_max": 3.707478768433248e-12,
+   "write_energy_nJ_per_write_with_verify": 351.69291834075,
+   "write_time_ms_per_write_with_verify": 16.0512
+  },
+  "tol_0.02": {
+   "converged_fraction": 1.0,
+   "newton_mean": 4.8,
+   "refinements_mean": 92.0,
+   "matvec_mean": 2300.0,
+   "final_residual_max": 3.293567640838546e-10,
+   "write_energy_nJ_per_write_with_verify": 351.68739402562505,
+   "write_time_ms_per_write_with_verify": 16.416
+  },
+  "tol_0.05": {
+   "converged_fraction": 0.0,
+   "newton_mean": null,
+   "refinements_mean": null,
+   "matvec_mean": null,
+   "final_residual_max": Infinity,
+   "write_energy_nJ_per_write_with_verify": 351.50653891499996,
+   "write_time_ms_per_write_with_verify": 9.23648
+  }
+ },
+ "lambda_5": {
+  "digital_newton": 4,
+  "tol_0.01": {
+   "converged_fraction": 1.0,
+   "newton_mean": 5.0,
+   "refinements_mean": 26.3,
+   "matvec_mean": 657.5,
+   "final_residual_max": 7.705835969318287e-12,
+   "write_energy_nJ_per_write_with_verify": 351.69599345579996,
+   "write_time_ms_per_write_with_verify": 17.3568
+  },
+  "tol_0.02": {
+   "converged_fraction": 1.0,
+   "newton_mean": 5.0,
+   "refinements_mean": 54.8,
+   "matvec_mean": 1370.0,
+   "final_residual_max": 1.9236168213865312e-10,
+   "write_energy_nJ_per_write_with_verify": 351.6959218374,
+   "write_time_ms_per_write_with_verify": 17.448960000000003
+  },
+  "tol_0.05": {
+   "converged_fraction": 0.0,
+   "newton_mean": null,
+   "refinements_mean": null,
+   "matvec_mean": null,
+   "final_residual_max": Infinity,
+   "write_energy_nJ_per_write_with_verify": 351.5489966898,
+   "write_time_ms_per_write_with_verify": 9.64608
+  }
+ },
+ "seconds": 40.7
+}

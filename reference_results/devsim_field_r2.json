@@ -1,0 +1,68 @@
+{
+ "tool": "DEVSIM 2.11.2",
+ "refine": 2.0,
+ "VG": -10.0,
+ "results": {
+  "conductor_base": {
+   "max_abs_F_MV_cm": 4.31,
+   "x_at_max_nm": 274.66,
+   "mean_abs_F_MV_cm": 4.31,
+   "F_centre_MV_cm": 4.3103,
+   "F_under_contact_MV_cm": 4.31,
+   "width_F_ge_half_max_nm": 502.62,
+   "convergence": {
+    "converged": true,
+    "iterations": 2,
+    "last": {
+     "iteration": 1
+    }
+   }
+  },
+  "conductor_s2023": {
+   "max_abs_F_MV_cm": 2.075,
+   "x_at_max_nm": 274.66,
+   "mean_abs_F_MV_cm": 2.075,
+   "F_centre_MV_cm": 2.0747,
+   "F_under_contact_MV_cm": 2.075,
+   "width_F_ge_half_max_nm": 502.62,
+   "convergence": {
+    "converged": true,
+    "iterations": 2,
+    "last": {
+     "iteration": 1
+    }
+   }
+  },
+  "depleted_base": {
+   "max_abs_F_MV_cm": 6.163,
+   "x_at_max_nm": 0.1,
+   "mean_abs_F_MV_cm": 0.103,
+   "F_centre_MV_cm": 0.0108,
+   "F_under_contact_MV_cm": 4.311,
+   "width_F_ge_half_max_nm": 2.65,
+   "convergence": {
+    "converged": true,
+    "iterations": 2,
+    "last": {
+     "iteration": 1
+    }
+   }
+  },
+  "depleted_s2023": {
+   "max_abs_F_MV_cm": 4.041,
+   "x_at_max_nm": 0.1,
+   "mean_abs_F_MV_cm": 0.079,
+   "F_centre_MV_cm": 0.0113,
+   "F_under_contact_MV_cm": 2.081,
+   "width_F_ge_half_max_nm": 2.4,
+   "convergence": {
+    "converged": true,
+    "iterations": 2,
+    "last": {
+     "iteration": 1
+    }
+   }
+  }
+ },
+ "label": "CALCULATION with an independent code (DEVSIM): field in the tunnel oxide"
+}

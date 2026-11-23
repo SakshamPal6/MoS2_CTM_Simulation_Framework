@@ -1,0 +1,56 @@
+{
+ "label": "MODEL PREDICTION (crossbar) + CALCULATION (digital at 10 pJ/op, yao2020): energy of one Newton-Raphson solution",
+ "digital_energy_per_op_J": 1e-11,
+ "read_time_s": 1e-06,
+ "lambda_1": {
+  "newton": 4.0,
+  "matvec": 967.5,
+  "cg_steps": 967.5,
+  "crossbar_write_J": 1.4067716733630003e-06,
+  "crossbar_digital_part_J": 2.6210687999999997e-05,
+  "crossbar_time_s": 0.0651723,
+  "crossbar_write_time_s": 0.0642048,
+  "digital_sparse": {
+   "newton": 3,
+   "cg_steps": 95,
+   "ops": 489856,
+   "energy_J": 4.89856e-06
+  },
+  "digital_dense_same_algorithm_J": 0.0012943322879999998,
+  "Vin_1": {
+   "crossbar_read_J": 1.6954767100196137e-08,
+   "crossbar_total_J": 2.7634414440463193e-05,
+   "crossbar_total_with_periphery_J": 2.787856308670602e-05,
+   "write_share": 0.05090651283361953,
+   "ratio_digital_sparse_over_crossbar": 0.1772630286975566,
+   "ratio_digital_sparse_over_crossbar_with_periphery": 0.17571063418027788,
+   "ratio_digital_dense_over_crossbar": 46.83769546803919
+  }
+ },
+ "lambda_5": {
+  "newton": 5.0,
+  "matvec": 657.5,
+  "cg_steps": 657.5,
+  "crossbar_write_J": 1.7584799672789998e-06,
+  "crossbar_digital_part_J": 1.7976191999999997e-05,
+  "crossbar_time_s": 0.0874415,
+  "crossbar_write_time_s": 0.086784,
+  "digital_sparse": {
+   "newton": 4,
+   "cg_steps": 124,
+   "ops": 638592,
+   "energy_J": 6.38592e-06
+  },
+  "digital_dense_same_algorithm_J": 0.0008797745919999999,
+  "Vin_1": {
+   "crossbar_read_J": 1.183203742793389e-08,
+   "crossbar_total_J": 1.974650400470693e-05,
+   "crossbar_total_with_periphery_J": 1.991688534366918e-05,
+   "write_share": 0.08905272380669686,
+   "ratio_digital_sparse_over_crossbar": 0.3233949664445819,
+   "ratio_digital_sparse_over_crossbar_with_periphery": 0.3206284461556054,
+   "ratio_digital_dense_over_crossbar": 44.553435473453426
+  }
+ },
+ "seconds": 2.5
+}

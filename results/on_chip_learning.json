@@ -1,0 +1,23 @@
+{
+ "label": "MODEL PREDICTION: on-chip learning of the output layer with model synapses",
+ "levels": 50,
+ "step_weight_units": 0.02040816326530612,
+ "float": {
+  "all_digits": 0.9353,
+  "digits_5_9": 0.9142151820613043,
+  "digits_0_4": 0.9552442109359798
+ },
+ "on_chip": {
+  "all_digits": 0.9169,
+  "digits_5_9": 0.8897346225056573,
+  "digits_0_4": 0.9425958357657132,
+  "pulses": 316685,
+  "resets": 3006,
+  "cells": 2560,
+  "energy_nJ": 89.0179206,
+  "pulse_time_ms_serial": 316.685,
+  "updates": 5625
+ },
+ "seconds": 13.4,
+ "rounding": "stochastic"
+}

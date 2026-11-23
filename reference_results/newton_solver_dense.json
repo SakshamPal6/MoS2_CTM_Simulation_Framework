@@ -1,0 +1,287 @@
+{
+ "label": "MODEL PREDICTION (crossbar) + CALCULATION (digital, 10 pJ/op from yao2020): Newton-Raphson on dense systems",
+ "digital_energy_per_op_J": 1e-11,
+ "n256_b2": {
+  "n": 256,
+  "digital": {
+   "newton": 4,
+   "cg_steps": 35,
+   "ops_cg": 5338880,
+   "ops_cholesky": 23555669.333333332,
+   "best": "CG",
+   "energy_J": 5.33888e-05
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 129.0,
+   "refinements": 8.0,
+   "write_J": 8.893093963950001e-07,
+   "read_J": 5.726351022800041e-09,
+   "digital_J": 2.5710079999999995e-05,
+   "total_J": 2.6605115747417795e-05,
+   "time_s": 0.06479460000000001,
+   "write_s": 0.06466559999999999,
+   "ratio_digital_over_crossbar": 2.0067118108735063,
+   "shares": {
+    "write": 0.033426255493036655,
+    "read": 0.0002152349599665178,
+    "digital": 0.9663585095469969
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 76.0,
+   "refinements": 5.0,
+   "write_J": 2.7601015176000006e-07,
+   "read_J": 2.671322283463149e-08,
+   "digital_J": 2.0600319999999998e-05,
+   "total_J": 2.090304337459463e-05,
+   "time_s": 0.015436,
+   "write_s": 0.015359999999999995,
+   "ratio_digital_over_crossbar": 2.5541161180810765,
+   "shares": {
+    "write": 0.013204304598796379,
+    "read": 0.0012779585420130018,
+    "digital": 0.9855177368591906
+   }
+  }
+ },
+ "n256_b5": {
+  "n": 256,
+  "digital": {
+   "newton": 6,
+   "cg_steps": 56,
+   "ops_cg": 8409856,
+   "ops_cholesky": 35267328.0,
+   "best": "CG",
+   "energy_J": 8.409855999999999e-05
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 201.8,
+   "refinements": 12.5,
+   "write_J": 1.288177869573e-06,
+   "read_J": 4.4440626649616575e-09,
+   "digital_J": 3.8773759999999995e-05,
+   "total_J": 4.006638193223796e-05,
+   "time_s": 0.09942739999999997,
+   "write_s": 0.0992256,
+   "ratio_digital_over_crossbar": 2.0989806402342794,
+   "shares": {
+    "write": 0.032151090451631587,
+    "read": 0.0001109174936852959,
+    "digital": 0.9677379920546831
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 103.2,
+   "refinements": 6.0,
+   "write_J": 2.7601015176000006e-07,
+   "read_J": 3.0931676720902e-08,
+   "digital_J": 2.7960831999999996e-05,
+   "total_J": 2.82677738284809e-05,
+   "time_s": 0.0154632,
+   "write_s": 0.015359999999999995,
+   "ratio_digital_over_crossbar": 2.975068376812445,
+   "shares": {
+    "write": 0.009764127640002162,
+    "read": 0.0010942381564457372,
+    "digital": 0.9891416342035521
+   }
+  }
+ },
+ "n1024_b2": {
+  "n": 1024,
+  "digital": {
+   "newton": 4,
+   "cg_steps": 36,
+   "ops_cg": 86377472,
+   "ops_cholesky": 1450555733.3333333,
+   "best": "CG",
+   "energy_J": 0.0008637747199999999
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 164.8,
+   "refinements": 10.0,
+   "write_J": 1.3383608645484002e-05,
+   "read_J": 2.536247147517282e-08,
+   "digital_J": 0.00041587711999999994,
+   "total_J": 0.0004292860911169592,
+   "time_s": 0.2680432,
+   "write_s": 0.26787839999999996,
+   "ratio_digital_over_crossbar": 2.0121190457220384,
+   "shares": {
+    "write": 0.031176432040137148,
+    "read": 5.9080580526571974e-05,
+    "digital": 0.9687644873793361
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 80.1,
+   "refinements": 5.0,
+   "write_J": 4.5003570192e-06,
+   "read_J": 3.505141990728134e-07,
+   "digital_J": 0.00030306406400000004,
+   "total_J": 0.0003079149352182728,
+   "time_s": 0.0615201,
+   "write_s": 0.06143999999999998,
+   "ratio_digital_over_crossbar": 2.805238139513086,
+   "shares": {
+    "write": 0.014615585359670245,
+    "read": 0.001138347507646367,
+    "digital": 0.9842460671326836
+   }
+  }
+ },
+ "n1024_b5": {
+  "n": 1024,
+  "digital": {
+   "newton": 6,
+   "cg_steps": 60,
+   "ops_cg": 141159424,
+   "ops_cholesky": 2174782464.0,
+   "best": "CG",
+   "energy_J": 0.0014115942399999999
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 211.1,
+   "refinements": 12.0,
+   "write_J": 2.0536597595997004e-05,
+   "read_J": 1.5544866706048305e-08,
+   "digital_J": 0.0005466316799999999,
+   "total_J": 0.0005671838224627029,
+   "time_s": 0.41247349999999994,
+   "write_s": 0.4122623999999999,
+   "ratio_digital_over_crossbar": 2.488777331255466,
+   "shares": {
+    "write": 0.036208010141804525,
+    "read": 2.7407105228341574e-05,
+    "digital": 0.9637645827529672
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 107.5,
+   "refinements": 6.0,
+   "write_J": 4.5003570192e-06,
+   "read_J": 3.7480078083894354e-07,
+   "digital_J": 0.00041117183999999995,
+   "total_J": 0.0004160469978000389,
+   "time_s": 0.0615475,
+   "write_s": 0.06143999999999998,
+   "ratio_digital_over_crossbar": 3.392872073261402,
+   "shares": {
+    "write": 0.010816943862104175,
+    "read": 0.0009008616402012372,
+    "digital": 0.9882821944976946
+   }
+  }
+ },
+ "n2304_b2": {
+  "n": 2304,
+  "digital": {
+   "newton": 4,
+   "cg_steps": 37,
+   "ops_cg": 446817024,
+   "ops_cholesky": 16403063040.0,
+   "best": "CG",
+   "energy_J": 0.0044681702399999995
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 157.1,
+   "refinements": 9.0,
+   "write_J": 6.670220945150701e-05,
+   "read_J": 5.1770072491244384e-08,
+   "digital_J": 0.0019484006399999997,
+   "total_J": 0.0020151546195239984,
+   "time_s": 0.5959715,
+   "write_s": 0.5958144000000001,
+   "ratio_digital_over_crossbar": 2.217284071757943,
+   "shares": {
+    "write": 0.03310029354832475,
+    "read": 2.569037233652723e-05,
+    "digital": 0.9668740160793385
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 4.0,
+   "matvec": 82.5,
+   "refinements": 5.0,
+   "write_J": 2.1145837509720004e-05,
+   "read_J": 1.4425845309380654e-06,
+   "digital_J": 0.001508256,
+   "total_J": 0.0015308444220406578,
+   "time_s": 0.13832250000000001,
+   "write_s": 0.13823999999999997,
+   "ratio_digital_over_crossbar": 2.9187618125451347,
+   "shares": {
+    "write": 0.013813185197181579,
+    "read": 0.0009423456166858945,
+    "digital": 0.9852444691861326
+   }
+  }
+ },
+ "n2304_b5": {
+  "n": 2304,
+  "digital": {
+   "newton": 6,
+   "cg_steps": 64,
+   "ops_cg": 755350272,
+   "ops_cholesky": 24599280384.0,
+   "best": "CG",
+   "energy_J": 0.00755350272
+  },
+  "rewrite_J": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 258.2,
+   "refinements": 14.0,
+   "write_J": 0.00010944144468287101,
+   "read_J": 4.306435838067615e-08,
+   "digital_J": 0.00292776192,
+   "total_J": 0.0030372464290412513,
+   "time_s": 0.9361430000000001,
+   "write_s": 0.9358848,
+   "ratio_digital_over_crossbar": 2.4869574782525525,
+   "shares": {
+    "write": 0.03603311329512953,
+    "read": 1.4178750189285764e-05,
+    "digital": 0.9639527079546812
+   }
+  },
+  "K_written_once": {
+   "converged_fraction": 1.0,
+   "newton": 6.0,
+   "matvec": 108.5,
+   "refinements": 6.0,
+   "write_J": 2.1145837509720004e-05,
+   "read_J": 1.4048831561493198e-06,
+   "digital_J": 0.0020460556799999996,
+   "total_J": 0.002068606400665869,
+   "time_s": 0.1383485,
+   "write_s": 0.13823999999999997,
+   "ratio_digital_over_crossbar": 3.651493448714353,
+   "shares": {
+    "write": 0.010222262438573774,
+    "read": 0.000679144740003269,
+    "digital": 0.9890985928214229
+   }
+  }
+ },
+ "seconds": 233.3
+}

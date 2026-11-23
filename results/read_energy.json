@@ -1,0 +1,107 @@
+{
+ "label": "MODEL PREDICTION: cell energy of one MNIST inference in place, read-time encoding; peripheral circuits excluded",
+ "accuracy_check": 0.9732,
+ "macs_per_inference": 101632,
+ "cases": {
+  "V1.00_t1e-06": {
+   "energy_per_inference_fJ": 28166.14702266108,
+   "energy_per_MAC_aJ": 277.138568784055,
+   "layer1_share": 0.9859247369123871,
+   "inferences_per_network_write": 4670.138512117744,
+   "inferences_per_learning_update": 0.5618591742042081
+  },
+  "V1.00_t1e-07": {
+   "energy_per_inference_fJ": 2816.614702266108,
+   "energy_per_MAC_aJ": 27.713856878405505,
+   "layer1_share": 0.9859247369123871,
+   "inferences_per_network_write": 46701.38512117743,
+   "inferences_per_learning_update": 5.61859174204208
+  },
+  "V0.50_t1e-06": {
+   "energy_per_inference_fJ": 14083.07100847684,
+   "energy_per_MAC_aJ": 138.5692597653971,
+   "layer1_share": 0.9859247443951262,
+   "inferences_per_network_write": 9340.278684196364,
+   "inferences_per_learning_update": 1.1237185481164644
+  },
+  "V0.50_t1e-07": {
+   "energy_per_inference_fJ": 1408.3071008476838,
+   "energy_per_MAC_aJ": 13.85692597653971,
+   "layer1_share": 0.9859247443951261,
+   "inferences_per_network_write": 93402.78684196365,
+   "inferences_per_learning_update": 11.237185481164644
+  },
+  "V0.25_t1e-06": {
+   "energy_per_inference_fJ": 7027.902984355107,
+   "energy_per_MAC_aJ": 69.1504937849802,
+   "layer1_share": 0.9859871484684658,
+   "inferences_per_network_write": 18716.793365150636,
+   "inferences_per_learning_update": 2.251796608731763
+  },
+  "V0.25_t1e-07": {
+   "energy_per_inference_fJ": 702.7902984355109,
+   "energy_per_MAC_aJ": 6.91504937849802,
+   "layer1_share": 0.9859871484684658,
+   "inferences_per_network_write": 187167.93365150632,
+   "inferences_per_learning_update": 22.517966087317625
+  }
+ },
+ "accuracy_at_V_D": {
+  "V1.00": 0.9732,
+  "V0.50": 0.9732,
+  "V0.25": 0.9733
+ },
+ "current_ratio_to_1V": {
+  "V1.00": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "V0.50": [
+   0.9999999999999838,
+   0.9999999999999771,
+   0.9999999999999726,
+   0.9999999999999519,
+   0.9999999999998814,
+   0.9999999999998007,
+   0.9999999999994535,
+   0.9999999999880254,
+   0.9999999995332403,
+   0.9999999963252947,
+   0.9999999936094016,
+   0.9999999773551999,
+   0.9999998111289118,
+   0.9999978794941314
+  ],
+  "V0.25": [
+   0.9999999997436697,
+   0.9999999996392338,
+   0.9999999995650708,
+   0.9999999992382568,
+   0.9999999981222343,
+   0.9999999968419256,
+   0.9999999913436792,
+   0.9999998102996006,
+   0.9999926062793966,
+   0.9999418255631951,
+   0.9998992243236523,
+   0.9996513941513756,
+   0.9974450185814404,
+   0.9824302426047441
+  ]
+ },
+ "network_write_nJ": 131.5398079485,
+ "learning_update_fJ": 15825.408106666666,
+ "seconds": 15.4
+}

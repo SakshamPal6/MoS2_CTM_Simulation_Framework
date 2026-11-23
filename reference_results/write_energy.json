@@ -1,0 +1,37 @@
+{
+ "label": "CALCULATION; inputs reported for the crossbar cell",
+ "inputs": {
+  "C_ox_stated_fF": 3.8,
+  "C_ox_from_stack_fF": 3.816,
+  "V_write_V": 10.0,
+  "line_width_um": 1.5,
+  "SiO2_nm": 285,
+  "cell_area_um2": 676,
+  "cell_pitch_um_assumed": 26.0
+ },
+ "read_gate_energy_check_fJ": 7.6,
+ "channel_half_CV2_fJ": 190.0,
+ "channel_CV2_from_supply_fJ": 380.0,
+ "gate_line_to_substrate_fF_per_cell": 4.73,
+ "gate_line_half_CV2_fJ": 236.3,
+ "range_fJ": [
+  190.0,
+  426.0
+ ],
+ "ratio_to_stated_0.2fJ": [
+  950,
+  2131
+ ],
+ "channel_term_permittivity_range": {
+  "half_CV2_fJ": {
+   "Al2O3 10, HfO2 25": 190.8,
+   "Al2O3 8, HfO2 25": 154.3,
+   "Al2O3 10, HfO2 16": 185.4,
+   "Al2O3 8, HfO2 16": 150.7
+  },
+  "range_fJ": [
+   150.7,
+   190.8
+  ]
+ }
+}

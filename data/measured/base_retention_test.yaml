@@ -1,0 +1,82 @@
+source: Schranghamer et al., Nat. Commun. 16, 9518 (2025), Supplementary Fig. 11d-f
+  and Fig. 15 (left)
+reading_error_dec: 0.05
+panels:
+  si11d:
+    logI_5s: -8.058
+    logI_10s: -8.097
+    logI_600s: -8.466
+    dlogI_5_600: -0.408
+    dlogI_10_600: -0.369
+    n_points: 297
+    test1_cyan:
+      dlogI_5_600: -0.524
+      dlogI_10_600: -0.524
+      n_points: 24
+    test2_blue:
+      dlogI_5_600: -0.408
+      dlogI_10_600: -0.35
+      n_points: 287
+    test3_magenta:
+      dlogI_5_600: -0.369
+      dlogI_10_600: -0.33
+      n_points: 297
+  si11e:
+    logI_5s: -8.272
+    logI_10s: -8.311
+    logI_600s: -8.621
+    dlogI_5_600: -0.35
+    dlogI_10_600: -0.311
+    n_points: 297
+    test1_cyan:
+      dlogI_5_600: .nan
+      dlogI_10_600: .nan
+      n_points: 111
+    test2_blue:
+      dlogI_5_600: .nan
+      dlogI_10_600: -0.272
+      n_points: 171
+    test3_magenta:
+      dlogI_5_600: -0.35
+      dlogI_10_600: -0.311
+      n_points: 297
+  si11f:
+    logI_5s: -8.058
+    logI_10s: -8.097
+    logI_600s: -8.738
+    dlogI_5_600: -0.68
+    dlogI_10_600: -0.641
+    n_points: 297
+    test1_cyan:
+      dlogI_5_600: -0.583
+      dlogI_10_600: -0.583
+      n_points: 293
+    test2_blue:
+      dlogI_5_600: -0.757
+      dlogI_10_600: -0.68
+      n_points: 297
+    test3_magenta:
+      dlogI_5_600: -0.777
+      dlogI_10_600: -0.699
+      n_points: 297
+  si15_pre:
+    first_point_t_s: 60.3
+    logI_first: -7.135
+    logI_60s_window: -7.149
+    logI_3600s: -7.649
+    dlogI_first_3600: -0.514
+    dlogI_60_3600: -0.5
+    n_points: 417
+SI11_median_of_panel_medians_dlogI_5_600: -0.408
+SI11_nine_traces_dlogI_5_600:
+- -0.524
+- -0.408
+- -0.369
+- .nan
+- .nan
+- -0.35
+- -0.583
+- -0.757
+- -0.777
+SI11_median_of_9_traces_dlogI_5_600: -0.524
+SI11_median_of_9_traces_dlogI_10_600: -0.437

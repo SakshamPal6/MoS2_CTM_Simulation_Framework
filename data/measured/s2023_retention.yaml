@@ -1,0 +1,14 @@
+source: 'Schranghamer et al., ACS AMI 15, 26946 (2023): SI Fig. S7c (retention) and
+  main Fig. 7a (programmed curves)'
+retention:
+  t_first_s: 4.1
+  t_px_s: 1.65
+  t_end_s: 597.5
+  logI_first: -7.172
+  logI_tend_over_10: -7.393
+  logI_end: -7.683
+  dlogI_first_to_end: -0.51
+  dlogI_last_decade: -0.29
+readout_slope_dec_per_V_at_0V: 0.426
+logI_at_0V_programmed_median: -6.6
+reading_error_dec: 0.05

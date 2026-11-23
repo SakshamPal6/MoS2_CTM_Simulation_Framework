@@ -1,0 +1,74 @@
+{
+ "label": "MODEL: calibrated model of record",
+ "chi2": 199.57,
+ "n_values": 94,
+ "k_free": 25,
+ "reduced_chi2": 2.892,
+ "chi2_blocks": {
+  "sweep_branches": 2.78,
+  "window_1us": 0.02,
+  "read_gate": 11.12,
+  "retention_base": 18.67,
+  "bias_stress_40nm": 0.69,
+  "window_100ms_40nm": 12.17,
+  "retention_40nm": 1.19,
+  "c25_series": 16.92,
+  "c25_retention": 33.96,
+  "g24": 32.47,
+  "pulse_100ms": 43.86,
+  "arrays": 20.69,
+  "s7a": 5.02,
+  "total": 199.57
+ },
+ "near_bound": [
+  "log10_N_t",
+  "log10_rate",
+  "log10_s_C25"
+ ],
+ "parameters": {
+  "log10_N_t": 14.4897,
+  "x_lo_nm": 4.6259,
+  "x_width_nm": 0.596,
+  "E_phys": 1.3332,
+  "sigma_b": 0.2265,
+  "E_t0": -0.079,
+  "lambda_eV": 8.8567,
+  "log10_rate": -1.0,
+  "log10_dt_pt": -1.8659,
+  "log10_tau_B": 2.5461,
+  "sigma_tau": 0.5877,
+  "log10_asym": 1.7623,
+  "E_B_eV": 0.0837,
+  "log10_s_C25": -0.9963,
+  "log10_s_G24": -0.8595,
+  "dvref_C25": -0.5497,
+  "dvref_G24": -2.2346,
+  "log10_h": -0.9172,
+  "psi_h": -1.5281,
+  "log10_conv": 4.389,
+  "conv_delta": 0.2911,
+  "conv_dx": 0.0771,
+  "log10_N_S": 14.3615,
+  "dE_S": 0.3907,
+  "sigma_S": 0.2947
+ },
+ "detail": {
+  "pulse": {
+   "shifts_V": [
+    -1.995,
+    2.668,
+    -2.009,
+    -2.135
+   ]
+  },
+  "array": {
+   "on_3g": -7.932897752884079,
+   "on_si19": -7.755598288965287,
+   "partially_on_si19": 0.04680027282415744
+  },
+  "s7a": {
+   "program_dec": 0.023572097738457927,
+   "erase_dec": 1.6077781587865334
+  }
+ }
+}

@@ -1,0 +1,17 @@
+source: "Schranghamer et al., Nat. Commun. 16, 9518 (2025), Supplementary Fig. 7 (Supplementary Note 8)"
+device: "one representative memtransistor; programmed ON by a 100 ms, -10 V pulse, then read at V_DS = 1 V at stepped V_mod"
+method: "page region rendered at native bitmap scale (1087 x 950); frame and ticks located automatically (decades 89.5 px apart, 1e-6 at y = 138; 200 s at x = 449.5, 400 s at x = 604, 0 s at x = 295); each column's coloured pixel runs classified by the colour of their most saturated half against the legend swatches (sampled from the figure); per segment a straight line in log10(I) vs t"
+digitization_uncertainty_dec: 0.01
+units: {t: "s", I: "A/um", logI: "log10(A/um)"}
+segments:   # [V_mod, t_start, t_end, logI_start, logI_end, mean I, scatter dec]
+  - [+3, 5, 54, -6.038, -6.221, 7.42e-7, 0.006]
+  - [+2, 52, 106, -6.727, -6.756, 1.81e-7, 0.007]
+  - [+1, 107, 159, -7.326, -7.317, 4.77e-8, 0.003]
+  - [0, 161, 214, -7.791, -7.775, 1.65e-8, 0.005]
+  - [-1, 215, 272, -8.356, -8.327, 4.55e-9, 0.006]
+  - [-2, 269, 329, -9.629, -9.592, 2.45e-10, 0.006]
+  - [-3, 324, 386, -10.977, -10.990, 1.04e-11, 0.012]
+  - [0, 383, 430, -7.530, -7.631, 2.63e-8, 0.009]
+notes:
+  - "The -3 V segment sits near the ~1e-11 A floor; its drift is not meaningful."
+  - "Caption claims 'the same current/conductance level is retained when V_mod switches between values'; the final 0 V segment is +0.20 dec above the first and relaxing (-0.10 dec in 47 s)."

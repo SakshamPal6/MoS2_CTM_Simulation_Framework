@@ -1,0 +1,7 @@
+{
+ "label": "Drain-current readout of the crossbar cell: EKV parameters fitted to its transfer curve (V_th, slope SS, mobility, series resistance)",
+ "vth": -0.49521772795787095,
+ "ss": 0.2811474097641108,
+ "mu": 0.3123032097814735,
+ "r_s": 100.0000010241537
+}

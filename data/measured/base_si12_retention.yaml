@@ -1,0 +1,24 @@
+source: Schranghamer et al., Nat. Commun. 16, 9518 (2025), Supplementary Fig. 12 (left,
+  middle)
+reading_error_dec: 0.05
+runs:
+  si12_10min:
+    t_first_s: 5.7
+    t_px_s: 2.29
+    t_end_s: 673.1
+    logI_first: -8.373
+    logI_tend_over_10: -8.824
+    logI_end: -9.314
+    dlogI_first_to_end: -0.941
+    dlogI_last_decade: -0.49
+    n_points: 209
+  si12_1h:
+    t_first_s: 6.6
+    t_px_s: 13.25
+    t_end_s: 4019.9
+    logI_first: -8.451
+    logI_tend_over_10: -9.02
+    logI_end: -9.706
+    dlogI_first_to_end: -1.255
+    dlogI_last_decade: -0.686
+    n_points: 296

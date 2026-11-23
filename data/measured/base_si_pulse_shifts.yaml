@@ -1,0 +1,15 @@
+source: "Schranghamer et al., Nat. Commun. 16, 9518 (2025), doi 10.1038/s41467-025-64536-2, Supplementary Figs. 6 and 8"
+method: "page region rendered at native bitmap scale (pymupdf); frame and decade ticks located automatically; curves by colour; V_th = first crossing of the stated current (linear interpolation in log I); overlays in _renders/base_si6_overlay.png, base_si8_overlay.png"
+digitization_uncertainty_V: 0.05
+units: {V_th: "V, back gate, V_DS = 1 V", I: "A/um"}
+si6_1us:
+  caption: "before and after a 1 us programming pulse (-10 V); legend Program / Erase; erase pulse width not stated"
+  V_th_at_1e-10: {program: -2.38, erase: 1.07, window: 3.45}
+  V_th_at_1e-9:  {program: -1.54, erase: 1.75, window: 3.29}
+si8_full_bias:
+  caption: "V_Program = -10 V, V_Erase = +10 V (panel c is labelled -10 V: a labelling error in the figure); pulse width NOT stated in the caption; main text: 100 ms 'used for all demonstrations unless otherwise stated'"
+  V_th_at_1e-10:
+    R1C1: {initial: 0.45, program: -2.04, erase: -0.16}
+    R2C1: {initial: 0.37, program: -1.41, erase: -0.09}
+  V_th_at_1e-9:
+    R2C1: {initial: 0.85, program: -0.81, erase: 0.38}

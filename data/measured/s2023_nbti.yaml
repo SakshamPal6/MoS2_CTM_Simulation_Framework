@@ -1,0 +1,25 @@
+source: Schranghamer et al., ACS Appl. Mater. Interfaces 15, 26946 (2023), Supplementary
+  Fig. S3c
+protocol: V_BG = -3 V, cumulative stress 1, 10, 100, 1000 s; 40/3/7 nm Al2O3/HfO2/Al2O3
+reading_error_V: 0.03
+dVth_V:
+  pre_25C:
+    '1': -0.008
+    '10': -0.026
+    '100': -0.04
+    '1000': -0.202
+  pre_125C:
+    '1': -0.053
+    '10': -0.158
+    '100': -0.407
+    '1000': -1.008
+  post_25C:
+    '1': 0.057
+    '10': 0.008
+    '100': -0.042
+    '1000': -0.241
+  post_125C:
+    '1': -0.09
+    '10': -0.242
+    '100': -0.641
+    '1000': -1.071

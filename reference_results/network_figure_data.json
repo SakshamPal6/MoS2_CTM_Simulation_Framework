@@ -1,0 +1,5 @@
+{
+ "mnist_accuracy": 0.9732,
+ "learning_final": 0.9169,
+ "solver_max_difference": 6.339373470609644e-14
+}

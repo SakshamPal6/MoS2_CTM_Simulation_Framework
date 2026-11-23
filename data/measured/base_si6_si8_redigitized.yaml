@@ -1,0 +1,183 @@
+source: Schranghamer et al., Nat. Commun. 16, 9518 (2025), Supplementary Figs. 6 (page 10) and 8 (page 12)
+compare_with: base_si_pulse_shifts.yaml (an earlier independent reading)
+si6:
+  calibration:
+    px_per_V: 88.107
+    x_tick_residual_px: 0.21
+    x_ticks: 7
+    px_per_decade: 87.636
+    y_tick_residual_px: 1.91
+    y_ticks: 50
+    inner_frame:
+    - 305
+    - 1009
+    - 74
+    - 747
+  colours:
+    program:
+    - 0
+    - 114
+    - 189
+    erase:
+    - 217
+    - 83
+    - 25
+    swatch_pixels:
+    - 1344
+    - 1307
+  vth_V:
+    program:
+      1e-10: -2.419
+      1e-09: -1.583
+    erase:
+      1e-10: 1.032
+      1e-09: 1.716
+  window_V:
+    1e-10: 3.451
+    1e-09: 3.299
+si8:
+  initial:
+    calibration:
+      px_per_V: 38.0
+      x_tick_residual_px: 0.0
+      x_ticks: 7
+      px_per_decade: 36.976
+      y_tick_residual_px: 1.65
+      y_ticks: 53
+    colours:
+      R1C1:
+      - 7
+      - 9
+      - 213
+      R2C1:
+      - 52
+      - 234
+      - 147
+      swatch_pixels:
+      - 222
+      - 217
+    vth_V:
+      R1C1:
+        1e-10: null
+        1e-09: null
+      R2C1:
+        1e-10: 0.374
+        1e-09: 0.772
+  program:
+    calibration:
+      px_per_V: 38.108
+      x_tick_residual_px: 0.43
+      x_ticks: 7
+      px_per_decade: 36.947
+      y_tick_residual_px: 1.27
+      y_ticks: 48
+    colours:
+      R1C1:
+      - 7
+      - 9
+      - 211
+      R2C1:
+      - 66
+      - 232
+      - 150
+      swatch_pixels:
+      - 292
+      - 221
+    vth_V:
+      R1C1:
+        1e-10: -1.944
+        1e-09: -1.462
+      R2C1:
+        1e-10: -1.327
+        1e-09: -0.829
+  erase:
+    calibration:
+      px_per_V: 38.072
+      x_tick_residual_px: 0.71
+      x_ticks: 7
+      px_per_decade: 36.97
+      y_tick_residual_px: 1.15
+      y_ticks: 44
+    colours:
+      R1C1:
+      - 7
+      - 9
+      - 216
+      R2C1:
+      - 67
+      - 232
+      - 151
+      swatch_pixels:
+      - 222
+      - 219
+    vth_V:
+      R1C1:
+        1e-10: null
+        1e-09: null
+      R2C1:
+        1e-10: 0.002
+        1e-09: 0.395
+comparison_old_new_diff_V:
+- - SI 6 program 1e-10
+  - -2.38
+  - -2.419
+  - -0.039
+- - SI 6 erase 1e-10
+  - 1.07
+  - 1.032
+  - -0.038
+- - SI 6 program 1e-09
+  - -1.54
+  - -1.583
+  - -0.043
+- - SI 6 erase 1e-09
+  - 1.75
+  - 1.716
+  - -0.034
+- - SI 8 R1C1 initial 1e-10
+  - 0.45
+  - null
+  - null
+- - SI 8 R1C1 program 1e-10
+  - -2.04
+  - -1.944
+  - 0.096
+- - SI 8 R1C1 erase 1e-10
+  - -0.16
+  - null
+  - null
+- - SI 8 R2C1 initial 1e-10
+  - 0.37
+  - 0.374
+  - 0.004
+- - SI 8 R2C1 program 1e-10
+  - -1.41
+  - -1.327
+  - 0.083
+- - SI 8 R2C1 erase 1e-10
+  - -0.09
+  - 0.002
+  - 0.092
+- - SI 8 R2C1 initial 1e-09
+  - 0.85
+  - 0.772
+  - -0.078
+- - SI 8 R2C1 program 1e-09
+  - -0.81
+  - -0.829
+  - -0.019
+- - SI 8 R2C1 erase 1e-09
+  - 0.38
+  - 0.395
+  - 0.015
+not_readable:
+- SI 8 R1C1 initial 1e-10
+- SI 8 R1C1 erase 1e-10
+not_readable_reason: 'no crossing held for 5 columns: in SI 8 panels a and c the R1C1 trace is covered by the R2C1 trace near
+  threshold (the caption: both cells erased to their initial states); R1C1 = R2C1 within the line width there (overlay base_si8_redigitized_overlay.png).
+  The 7 Oct values for these points were read where the trace is not visible'
+comparison_summary:
+  n: 11
+  max_abs_diff_V: 0.096
+  rms_diff_V: 0.058
+  stored_uncertainty_V: 0.05

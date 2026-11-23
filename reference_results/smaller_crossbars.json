@@ -1,0 +1,155 @@
+{
+ "label": "MODEL PREDICTION: MNIST on multi-level differential-pair crossbars of model cells ",
+ "A_14x14_single_196x20": {
+  "float": 0.9169,
+  "cells": 3920,
+  "crossbars": [
+   [
+    196,
+    20
+   ]
+  ],
+  "before_device_aware": {
+   "model_cells_1_s": 0.913,
+   "model_cells_601_s": 0.9089,
+   "spread_0.05_V": {
+    "mean": 0.90931,
+    "min": 0.9066,
+    "max": 0.9124
+   },
+   "spread_0.10_V": {
+    "mean": 0.8918200000000001,
+    "min": 0.8702,
+    "max": 0.9037
+   },
+   "spread_0.20_V": {
+    "mean": 0.81979,
+    "min": 0.7488,
+    "max": 0.8773
+   }
+  },
+  "after_device_aware": {
+   "model_cells_1_s": 0.9185,
+   "model_cells_601_s": 0.8984,
+   "spread_0.05_V": {
+    "mean": 0.9140599999999999,
+    "min": 0.9099,
+    "max": 0.9173
+   },
+   "spread_0.10_V": {
+    "mean": 0.8968300000000001,
+    "min": 0.8767,
+    "max": 0.9075
+   },
+   "spread_0.20_V": {
+    "mean": 0.83474,
+    "min": 0.7743,
+    "max": 0.8802
+   }
+  },
+  "cell_energy_per_digit_pJ_1V_1us": 1.8539331594317805
+ },
+ "B_28x28_single_784x20": {
+  "float": 0.925,
+  "cells": 15680,
+  "crossbars": [
+   [
+    784,
+    20
+   ]
+  ],
+  "before_device_aware": {
+   "model_cells_1_s": 0.9129,
+   "model_cells_601_s": 0.9158,
+   "spread_0.05_V": {
+    "mean": 0.9117099999999999,
+    "min": 0.9052,
+    "max": 0.916
+   },
+   "spread_0.10_V": {
+    "mean": 0.9047599999999999,
+    "min": 0.8945,
+    "max": 0.9122
+   },
+   "spread_0.20_V": {
+    "mean": 0.8854600000000001,
+    "min": 0.8721,
+    "max": 0.9007
+   }
+  },
+  "after_device_aware": {
+   "model_cells_1_s": 0.9236,
+   "model_cells_601_s": 0.9159,
+   "spread_0.05_V": {
+    "mean": 0.92262,
+    "min": 0.9189,
+    "max": 0.9259
+   },
+   "spread_0.10_V": {
+    "mean": 0.9150600000000001,
+    "min": 0.9082,
+    "max": 0.9212
+   },
+   "spread_0.20_V": {
+    "mean": 0.88765,
+    "min": 0.8771,
+    "max": 0.8969
+   }
+  },
+  "cell_energy_per_digit_pJ_1V_1us": 3.261620753840318
+ },
+ "C_14x14_two_layer_196x64_32x20": {
+  "float": 0.9504,
+  "cells": 13184,
+  "crossbars": [
+   [
+    196,
+    64
+   ],
+   [
+    32,
+    20
+   ]
+  ],
+  "before_device_aware": {
+   "model_cells_1_s": 0.9358,
+   "model_cells_601_s": 0.9304,
+   "spread_0.05_V": {
+    "mean": 0.9257700000000002,
+    "min": 0.9076,
+    "max": 0.9387
+   },
+   "spread_0.10_V": {
+    "mean": 0.88581,
+    "min": 0.8231,
+    "max": 0.9201
+   },
+   "spread_0.20_V": {
+    "mean": 0.70309,
+    "min": 0.5389,
+    "max": 0.8129
+   }
+  },
+  "after_device_aware": {
+   "model_cells_1_s": 0.952,
+   "model_cells_601_s": 0.9382,
+   "spread_0.05_V": {
+    "mean": 0.94339,
+    "min": 0.9303,
+    "max": 0.9499
+   },
+   "spread_0.10_V": {
+    "mean": 0.90656,
+    "min": 0.8687,
+    "max": 0.9352
+   },
+   "spread_0.20_V": {
+    "mean": 0.70259,
+    "min": 0.5548,
+    "max": 0.8385
+   }
+  },
+  "cell_energy_per_digit_pJ_1V_1us": 3.911706848337311
+ },
+ "seconds": 27.5
+}

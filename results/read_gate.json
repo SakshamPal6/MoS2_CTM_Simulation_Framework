@@ -1,0 +1,52 @@
+{
+ "label": "MODEL CALCULATION: calibrated model, no fit",
+ "A_read_gate": {
+  "model_offset_dec": 0.1566821199507805,
+  "model_final_0V_drift_dec": -0.015014210064504195,
+  "n_segments": 8,
+  "measured_final_0V_drift_dec": -0.102,
+  "slope_dec_per_V": 0.5102534911915004,
+  "dA_V": -0.28551742539614255,
+  "dB_V": -0.021479581169038253,
+  "share_surface": 0.06996674465774559,
+  "offset_same_time_at_0V_no_read_gate_dec": -0.09180012708926168,
+  "recovery_after_sequence": {
+   "100": {
+    "A_minus_first_read_V": -0.2837328476524146,
+    "B_minus_first_read_V": 0.02167637195922628,
+    "offset_dec": 0.13371523161178991
+   },
+   "1000": {
+    "A_minus_first_read_V": -0.2813060350879575,
+    "B_minus_first_read_V": 0.10615321661746069,
+    "offset_dec": 0.08937233711660211
+   },
+   "10000": {
+    "A_minus_first_read_V": -0.2727939687020744,
+    "B_minus_first_read_V": 0.12474913515569802,
+    "offset_dec": 0.0755403931699031
+   },
+   "100000": {
+    "A_minus_first_read_V": -0.21369728322497994,
+    "B_minus_first_read_V": 0.09745539685731114,
+    "offset_dec": 0.059312828341788686
+   }
+  },
+  "measured_offset_dec": 0.202,
+  "first_read_s": 187.5,
+  "second_read_s": 406.5
+ },
+ "B_hole_onset": {
+  "psi_h": -1.5281020962170737,
+  "m": 6.633333333333334,
+  "u_half_V": -10.136410571573256,
+  "v_ref_V": 0.0,
+  "erased_dV_V": 2.8197802372861127,
+  "V_G_half_from_erased_V": -7.316630334287144,
+  "sweep_rate_V_s": 0.1,
+  "V_G_half_down_sweep_V": null,
+  "lowest_u_down_sweep_V": -6.889136935785693,
+  "largest_s_h_over_h_down_sweep": 6.185180657627043e-09,
+  "u_at_minus_10V_erased_V": -12.819780237286112
+ }
+}

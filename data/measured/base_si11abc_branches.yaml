@@ -1,0 +1,188 @@
+source: Schranghamer et al., Nat. Commun. 16, 9518 (2025), Supplementary Fig. 11a-c
+reference: '+-5 V loop centre at each current level (the +-4 V loop is
+  unreadable)'
+reading_error_V: 0.25
+devices:
+  si11a:
+    device: R1C1
+    branch_shifts:
+      5:
+        up: -0.353
+        up_sd: 0.029
+        down: 0.353
+        down_sd: 0.029
+        window: 0.705
+        window_sd: 0.057
+        n_levels: 5
+      6:
+        up: -0.904
+        up_sd: 0.126
+        down: 0.596
+        down_sd: 0.026
+        window: 1.5
+        window_sd: 0.119
+        n_levels: 5
+      7:
+        up: -1.558
+        up_sd: 0.225
+        down: 1.34
+        down_sd: 0.33
+        window: 2.897
+        window_sd: 0.261
+        n_levels: 5
+      8:
+        up: -2.673
+        up_sd: 0.405
+        down: 2.327
+        down_sd: 0.507
+        window: 5.0
+        window_sd: 0.45
+        n_levels: 5
+      9:
+        up: -2.987
+        up_sd: 0.324
+        down: 2.571
+        down_sd: 0.096
+        window: 5.558
+        window_sd: 0.258
+        n_levels: 5
+      10:
+        up: -3.622
+        up_sd: 0.378
+        down: 3.494
+        down_sd: 0.122
+        window: 7.115
+        window_sd: 0.278
+        n_levels: 5
+    found_levels:
+      2: 0
+      3: 0
+      4: 0
+      5: 5
+      6: 5
+      7: 5
+      8: 5
+      9: 5
+      10: 5
+  si11b:
+    device: R50C5
+    branch_shifts:
+      5:
+        up: -0.346
+        up_sd: 0.013
+        down: 0.346
+        down_sd: 0.013
+        window: 0.692
+        window_sd: 0.026
+        n_levels: 5
+      6:
+        up: -0.795
+        up_sd: 0.1
+        down: 0.615
+        down_sd: 0.092
+        window: 1.41
+        window_sd: 0.07
+        n_levels: 5
+      7:
+        up: -1.756
+        up_sd: 0.222
+        down: 1.218
+        down_sd: 0.186
+        window: 2.974
+        window_sd: 0.305
+        n_levels: 5
+      8:
+        up: -2.397
+        up_sd: 0.382
+        down: 2.244
+        down_sd: 0.621
+        window: 4.641
+        window_sd: 0.454
+        n_levels: 5
+      9:
+        up: -2.808
+        up_sd: 0.365
+        down: 2.731
+        down_sd: 0.23
+        window: 5.538
+        window_sd: 0.15
+        n_levels: 5
+      10:
+        up: -3.417
+        up_sd: 0.56
+        down: 3.628
+        down_sd: 0.29
+        window: 7.045
+        window_sd: 0.287
+        n_levels: 5
+    found_levels:
+      2: 0
+      3: 0
+      4: 0
+      5: 5
+      6: 5
+      7: 5
+      8: 5
+      9: 5
+      10: 5
+  si11c:
+    device: R100C10
+    branch_shifts:
+      5:
+        up: -0.391
+        up_sd: 0.037
+        down: 0.391
+        down_sd: 0.037
+        window: 0.782
+        window_sd: 0.075
+        n_levels: 5
+      6:
+        up: -0.891
+        up_sd: 0.094
+        down: 0.647
+        down_sd: 0.106
+        window: 1.538
+        window_sd: 0.107
+        n_levels: 5
+      7:
+        up: -1.942
+        up_sd: 0.347
+        down: 1.378
+        down_sd: 0.474
+        window: 3.321
+        window_sd: 0.234
+        n_levels: 5
+      8:
+        up: -2.75
+        up_sd: 0.397
+        down: 2.429
+        down_sd: 0.446
+        window: 5.179
+        window_sd: 0.37
+        n_levels: 5
+      9:
+        up: -3.019
+        up_sd: 0.346
+        down: 2.75
+        down_sd: 0.241
+        window: 5.769
+        window_sd: 0.146
+        n_levels: 5
+      10:
+        up: -3.679
+        up_sd: 0.442
+        down: 3.66
+        down_sd: 0.262
+        window: 7.34
+        window_sd: 0.213
+        n_levels: 5
+    found_levels:
+      2: 0
+      3: 0
+      4: 0
+      5: 5
+      6: 5
+      7: 5
+      8: 5
+      9: 5
+      10: 5

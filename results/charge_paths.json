@@ -1,0 +1,143 @@
+{
+ "label": "MODEL CALCULATION: calibrated model, base cell, 300 K; a path removed at frozen parameters (not a refit)",
+ "protocol": {
+  "erase_s": 0.1,
+  "rest_s": 1.0
+ },
+ "window_V_full_model": {
+  "1e-06": 3.47,
+  "1e-05": 3.735,
+  "0.0001": 3.871,
+  "0.001": 4.003,
+  "0.01": 4.455,
+  "0.1": 4.819
+ },
+ "shares_erased_cell": {
+  "1e-06": {
+   "released_by_electron_emission_V": 0.35115696568287985,
+   "released_by_hole_assisted_path_V": 3.110797588956995,
+   "hole_assisted_share": 0.8985668470973304,
+   "field_MV_cm_and_hole_availability": [
+    [
+     1e-12,
+     -4.879,
+     1.0
+    ],
+    [
+     1.02e-10,
+     -4.868,
+     1.0
+    ],
+    [
+     1.04e-08,
+     -4.278,
+     0.9994
+    ],
+    [
+     1e-06,
+     -3.423,
+     0.0103
+    ]
+   ]
+  },
+  "0.1": {
+   "released_by_electron_emission_V": 1.0235882098389135,
+   "released_by_hole_assisted_path_V": 1.6564820518216254,
+   "hole_assisted_share": 0.6180741137716625,
+   "field_MV_cm_and_hole_availability": [
+    [
+     1e-07,
+     -3.641,
+     0.2474
+    ],
+    [
+     1.02e-05,
+     -3.324,
+     0.0022
+    ],
+    [
+     0.00104,
+     -3.225,
+     0.0004
+    ],
+    [
+     0.1,
+     -2.886,
+     0.0
+    ]
+   ]
+  }
+ },
+ "window_V_no_hole_path": {
+  "1e-06": 1.559,
+  "1e-05": 2.158,
+  "0.0001": 2.7,
+  "0.001": 3.253,
+  "0.01": 4.056,
+  "0.1": 4.536
+ },
+ "direct_tunnelling_rate_s": {
+  "nu0": 10000000000000.0,
+  "two_kappa_per_nm": 8.9,
+  "at_x_lo": 5.445274381785904e-06,
+  "chain_rate_at_x_lo": 292626150.4749281
+ },
+ "window_V_no_hopping_chain": {
+  "1e-06": 0.0,
+  "1e-05": 0.0,
+  "0.0001": 0.0,
+  "0.001": 0.0,
+  "0.01": 0.0,
+  "0.1": 0.0
+ },
+ "release_1us": {
+  "released_V": 3.462,
+  "share_above_attempt_rate": 0.9686,
+  "share_by_path": {
+   "e_pos": 0.0258,
+   "e_neg": 0.0757,
+   "h_pos": 0.0056,
+   "h_neg": 0.8929
+  },
+  "lowest_activation_eV": -1.044,
+  "largest_rate_over_prefactor": 1.0,
+  "largest_rate_prefactor_s": 293000000.0,
+  "field_MV_cm_start_end": [
+   -4.879,
+   -3.423
+  ]
+ },
+ "release_100ms": {
+  "released_V": 2.6803,
+  "share_above_attempt_rate": 0.7495,
+  "share_by_path": {
+   "e_pos": 0.2483,
+   "e_neg": 0.1336,
+   "h_pos": 0.0022,
+   "h_neg": 0.6159
+  },
+  "lowest_activation_eV": -0.879,
+  "largest_rate_over_prefactor": 1.0,
+  "largest_rate_prefactor_s": 293000000.0,
+  "field_MV_cm_start_end": [
+   -3.641,
+   -2.886
+  ]
+ },
+ "window_V_refit_no_hole": {
+  "1e-06": 3.41,
+  "1e-05": 3.691,
+  "0.0001": 3.777,
+  "0.001": 3.975,
+  "0.01": 4.843,
+  "0.1": 5.458
+ },
+ "window_V_refit_direct": {
+  "1e-06": 1.793,
+  "1e-05": 2.159,
+  "0.0001": 2.444,
+  "0.001": 2.648,
+  "0.01": 2.707,
+  "0.1": 2.767
+ }
+}

@@ -1,0 +1,51 @@
+# Memory window vs DC sweep amplitude -- Fig. 1d of the crossbar-cell article
+# MEASURED DATA, digitized from the source figure
+source:
+  paper: "Schranghamer et al., Nat. Commun. 16:9518 (2025)"
+  figure: "Fig. 1d, page 3"
+  device: "one representative device of the 16x10 array"
+  conditions: "V_DS = 1 V; back-gate DC sweep +/-A for A = 2..10 V"
+  sweep_rate: "NOT STATED in paper or SI; model has used 1 V/s (calibration/report.py:155) -- ASSUMPTION"
+  window_definition: >
+    Horizontal distance between the two sweep branches at a constant
+    current level. The paper does not state which level; reported here as
+    the mean over 5 levels (1e-10 .. 1e-8 A/um) with the spread.
+method:
+  bitmap: "PDF xref 165, 1477x1490 px, ~300 dpi, extracted natively (no resampling)"
+  x_calibration: "ticks -10/-5/0/5/10 V at px 149/220.5/292.75/364.5/436.5; 0.0695 V/px; max residual 0.017 V"
+  y_calibration: "decade ticks 37 px apart (1e-6 at row 66.5, 1e-12 at row 288.75)"
+  trace_identification: "legend RGB read from PDF vector text; nearest-colour, tolerance 55"
+  search_range_V: [-8.5, 9.0]
+  reading_error_V: 0.1   # ~1.5 px per branch centre
+check_against_paper:
+  stated: "~7 V for +/-10 V (Fig. 1d caption); 7.30 +/- 0.40 V over 32 devices (SI Fig. 5a)"
+  extracted_10V: 7.32
+  passes: true
+  caveat: "The old KWW model was FITTED to 7.30 V, so this point is not independent of it."
+windows:
+  - {sweep_V: 2,  status: not_extractable, note: "trace fully occluded"}
+  - {sweep_V: 3,  status: not_extractable, note: "trace fully occluded"}
+  - {sweep_V: 4,  status: upper_bound, window_V_max: 0.42, note: "branches merged within line width"}
+  - {sweep_V: 5,  status: measured, window_V: 0.74, spread_V: 0.14}
+  - {sweep_V: 6,  status: measured, window_V: 1.61, spread_V: 0.17}
+  - {sweep_V: 7,  status: measured, window_V: 2.77, spread_V: 0.14}
+  - {sweep_V: 8,  status: measured, window_V: 4.16, spread_V: 0.28}
+  - {sweep_V: 9,  status: measured, window_V: 5.80, spread_V: 0.35}
+  - {sweep_V: 10, status: measured, window_V: 7.32, spread_V: 0.45}
+
+# Branch shifts, separated by carrier. Each branch is compared with the
+# near-neutral +/-4 V curve at the SAME current level, then averaged over
+# levels 1e-10..1e-8 A/um. Left branch (forward sweep, after the negative
+# extreme) = hole trapping; right branch = electron trapping.
+# Extra uncertainty: the +/-4 V reference has its own window <= 0.42 V,
+# so ~0.2 V is added to every shift's reading error.
+branch_shifts:
+  reference: "+/-4 V loop centre at each current level"
+  uncertainty_V: 0.25
+  points:   # [sweep V, hole shift V, hole sd V, electron shift V, electron sd V]
+    - [5,  -0.46, 0.09, 0.29, 0.04]
+    - [6,  -0.99, 0.16, 0.62, 0.10]
+    - [7,  -1.68, 0.17, 1.08, 0.13]
+    - [8,  -2.41, 0.25, 1.75, 0.17]
+    - [9,  -3.27, 0.27, 2.53, 0.15]
+    - [10, -3.94, 0.33, 3.37, 0.17]
