@@ -42,4 +42,4 @@ No value in this package was measured by the authors; the calibration data come 
 ## MNIST
 
 The handwritten-digit images come from the MNIST database: Y. LeCun, C. Cortes and C. J. C. Burges,
-*The MNIST database of handwritten digits*, http://yann.lecun.com/exdb/mnist/ (stored here as `data/mnist/mnist.npz` in the NumPy format).
+*The MNIST database of handwritten digits*, available on Kaggle at https://www.kaggle.com/datasets/vikramtiwari/mnist-numpy (stored here as `data/mnist/mnist.npz` in the NumPy format).
