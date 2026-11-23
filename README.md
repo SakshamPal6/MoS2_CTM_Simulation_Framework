@@ -39,7 +39,9 @@ rerun only with `python run_all.py --long`. See README.docx, Sections 3 to 6.
 
 No value in this package was measured by the authors; the calibration data come from the cited articles (README.docx, Section 8).
 
-## MNIST
+## Dataset
 
-The handwritten-digit images come from the MNIST database: Y. LeCun, C. Cortes and C. J. C. Burges,
-*The MNIST database of handwritten digits*, available on Kaggle at https://www.kaggle.com/datasets/vikramtiwari/mnist-numpy (stored here as `data/mnist/mnist.npz` in the NumPy format).
+The handwritten-digit images used to train and test the networks come from the MNIST database of handwritten digits
+(LeCun Y, Cortes C and Burges C J C), available on Kaggle at https://www.kaggle.com/datasets/vikramtiwari/mnist-numpy.
+The networks use its 60000 training and 10000 test images. The package contains this file as `data/mnist/mnist.npz`
+in the NumPy format, and the scripts marked M in Table 4 of README.docx take it as their argument.
